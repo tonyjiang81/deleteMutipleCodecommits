@@ -17,6 +17,6 @@ IFS=$OLD_IFS
 
 # Print each part
 for part in "${parts[@]}"; do
-  aws codecommit delete-repository --repository-name $part --profile personal --region ap-southeast-1 
+  aws codecommit delete-repository --repository-name $part --profile personal --region ap-southeast-1  > /dev/null 2>&1 < /dev/null
 done
 
